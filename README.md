@@ -15,6 +15,10 @@ It also helps to structure your programs better if each file has it's own respon
 Your style of coding may also be different depending on the type of file – pure javascript modules may be written in a functional programming style, while the main browser file is likely to be more imperative.
 
 Let's review the types of javascript file you'll work with.
+| ![Types of javascript file. Browser main files can import browser modules. Server main files can import server modules. Test files can import test modules. All modules can import other modules of the same type. All files can import pure javascript modules.](js_file_types.png) |
+|---|
+| **Types of Javascript files:** Main files and modules running on the browser, server, and test framework. Arrows show which types of file can import other types, e.g. a browser main file can import a pure javascript module, and a server module can import another server module.|
+
 
 ### Browser Main File ###
 One of the most important files in a web app is your browser main file.
@@ -29,7 +33,9 @@ The main browser file can import any number of browser modules and pure javascri
 As a file running on a browser, it also has access to all the [Web APIs](https://developer.mozilla.org/en-US/docs/Web/API), e.g. [`document`](https://developer.mozilla.org/en-US/docs/Web/API/Document) to access the *Document Object Model (DOM)* which manpulates browser UI elements in the page, and [`fetch`](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) which faciltates *ajax* requests.
 
 ### Server Main File ###
-
+```bash
+node server.js
+```
 
 ### Modules ###
 Modules are files that don't run in their own right, but export functionality that other javascript files can import and make use of.
@@ -45,16 +51,4 @@ const Module = Object.create(null);
 Module.property = ... // Add functionality to the exported module object.
 
 export default Object.freeze(Module);
-```
-
-
-
-| ![Types of javascript file. Browser main files can import browser modules. Server main files can import server modules. Test files can import test modules. All modules can import other modules of the same type. All files can import pure javascript modules.](js_file_types.png) |
-|---|
-| **Types of Javascript files:** Main files and modules running on the browser, server, and test framework. Arrows show which types of file can import other types, e.g. a browser main file can import a pure javascript module, and a server module can import another server module.|
-
-
-
-```bash
-node server.js
 ```
