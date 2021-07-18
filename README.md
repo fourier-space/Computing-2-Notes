@@ -1,4 +1,5 @@
-# Javascript files
+# The Structure of a Web App
+## Javascript Files
 
 Javascript files in web apps come in a number of varieties.
 Some files are run directly and immediately take actions – these are *main* files;
@@ -17,7 +18,7 @@ Your style of coding may also be different depending on the type of file – pur
 Let's review the types of javascript file you'll work with.
 | ![Types of javascript file. Browser main files can import browser modules. Server main files can import server modules. Test files can import test modules. All modules can import other modules of the same type. All files can import pure javascript modules.](js_file_types.png) |
 |---|
-| **Types of Javascript files:** Main files and modules running on the browser, server, and test framework. Arrows show which types of file can import other types, e.g. a browser main file can import a pure javascript module, and a server module can import another server module.|
+| **Types of javascript files:** Main files and modules running on the browser, server, and test framework. Arrows show which types of file can import other types, e.g. a browser main file can import a pure javascript module, and a server module can import another server module.|
 
 
 ### Browser Main File ###
@@ -77,7 +78,7 @@ i.e. a browser module can only be imported into other browser modules or main fi
 In practice, there's nothing stopping you to import a browser module into a server file, but your program will raise an error when it tries to access a feature that isn't availible to it in the context.
 A common error of this form is `Uncaught ReferenceError: document is not defined`.
 
-Browser modules, server modules, and pure Javascript modules can have may different purposes.
+Browser modules, server modules, and pure javascript modules can have may different purposes.
 A browser module might define a helper function for making ajax calls, or be responsible for a particular UI interaction or animation.
 A server module might give access to a database, or define an api.
 Wheras pure javascript modules may be to play chess, represent complex numbers, or manipulate arrays.
@@ -86,3 +87,19 @@ It is best practice that each module has a single responsibility and has as narr
 For example, a module that represents the states and rules of a game of chess should be independent of a module that displays that game in a browser.
 The module that displays a game might import the module that knows the rules, or a main program might import both modules and be responsible for integrating them, but the chess rules module should be independent of how the game is displayed to the user so should not import any browser modules – chess has existed for much longer than web browsers.
 
+### Test Files and Modules ###
+In addition to browser and server files, there are also test files.
+A test framework is another runtime environment for javascript files.
+In practice, test files are often run by the node.js runtime, the same as on the server, but with additional features available.
+We will use [Mocha](https://mochajs.org/) as our test framework, which provides the global functions `describe()` and `it()` which define a suite of tests that can be read by external tooling such as the *Test Explorer* in VSCode.
+In principle, Mocha can also run in the browser runtime too, but we won't explore this further here.
+
+Test files don't form part of the web-app itself, but sit alongside it.
+Since tests are a different environmental context, they shouldn't import browser or server files.
+This means it is the pure javascript modules that test files can import, and it is the functionality provided there that should be put under test.
+Unit testing shouldn't be dependent on things outside the control of the programmer, such as users or the network, so it is a cleaner approach to ignore these things and test code in pure javascript that is used in the web app.
+
+Each test file might mirror a javascript module and test features of it, we'll use the naming convention of a pure js module `module.js` will be imported into and tested by a test file `module.test.js`.
+The test files are picked up by the testing framework.
+In our case, a `.mocharc.json` file instructs us to look for files with the `.test.js` suffix in a `tests` folder.
+Test files can also import test modules, these might themselves contain more tests, or [fast-check](https://github.com/dubzzz/fast-check) *arbitraries*, or other helper functions for testing.
