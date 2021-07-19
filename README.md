@@ -107,3 +107,8 @@ Each test file might focus on a javascript module and test features of it, we'll
 The test files are picked up by the testing framework.
 In our case, a `.mocharc.json` file instructs us to look for files with the `.test.js` suffix in a `tests` folder.
 Test files can also import test modules, these might themselves contain more tests, or [fast-check](https://github.com/dubzzz/fast-check) *arbitraries*, or other helper functions for testing.
+
+### Example ###
+| ![Web app file structure example.](resources/web_app_file_structure_example.png) |
+|---|
+| **Web app file structure example:** |
