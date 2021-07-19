@@ -108,7 +108,10 @@ The test files are picked up by the testing framework.
 In our case, a `.mocharc.json` file instructs us to look for files with the `.test.js` suffix in a `tests` folder.
 Test files can also import test modules, these might themselves contain more tests, or [fast-check](https://github.com/dubzzz/fast-check) *arbitraries*, or other helper functions for testing.
 
-### Example ###
+### Example file structure ###
+Let's see how each of these types of file fit together in a small web app example.
+We'll look at the structure of a Rock-Paper-Scissors (RPS) game app that we'll return to in more detail throughout.
+
 | ![Web app file structure example.](resources/web_app_file_structure_example.png) |
 |---|
 | **Web app file structure example:** |
