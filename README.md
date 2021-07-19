@@ -72,6 +72,10 @@ Module.property = ... // Add functionality to the exported module object.
 export default Object.freeze(Module);
 ```
 
+Modules have *module scope*, which means that all variables declared within a module file are only accessible within that file.
+This is a good thing, it means code written in one file doesn't interfere with that in another, for example if they both use a variable `x` that gets re-assigned in one file.
+Only values explicitly exported and imported are shared between files.
+
 Modules can be written for the browser or the server, based on what environment features they call, or written in pure javascript to be imported anywhere.
 Be aware that modules written for a particular environment can only be imported by files written for the same environment,
 i.e. a browser module can only be imported into other browser modules or main files.
@@ -99,7 +103,7 @@ Since tests are a different environmental context, they shouldn't import browser
 This means it is the pure javascript modules that test files can import, and it is the functionality provided there that should be put under test.
 Unit testing shouldn't be dependent on things outside the control of the programmer, such as users or the network, so it is a cleaner approach to ignore these things and test code in pure javascript that is used in the web app.
 
-Each test file might mirror a javascript module and test features of it, we'll use the naming convention of a pure js module `module.js` will be imported into and tested by a test file `module.test.js`.
+Each test file might focus on a javascript module and test features of it, we'll use the naming convention of a pure js module `module.js` will be imported into and tested by a test file `module.test.js`.
 The test files are picked up by the testing framework.
 In our case, a `.mocharc.json` file instructs us to look for files with the `.test.js` suffix in a `tests` folder.
 Test files can also import test modules, these might themselves contain more tests, or [fast-check](https://github.com/dubzzz/fast-check) *arbitraries*, or other helper functions for testing.

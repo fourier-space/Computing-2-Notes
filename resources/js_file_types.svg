@@ -405,6 +405,21 @@
          style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
          transform="scale(-0.4)" />
     </marker>
+    <marker
+       inkscape:stockid="TriangleInM"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker12534-5"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path12532-6"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="scale(-0.4)"
+         inkscape:connector-curvature="0" />
+    </marker>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -414,8 +429,8 @@
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
      inkscape:zoom="1"
-     inkscape:cx="298.92941"
-     inkscape:cy="151.73414"
+     inkscape:cx="179.58875"
+     inkscape:cy="65.725715"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -464,11 +479,10 @@
      id="layer1"
      transform="translate(-18.949683,-191.16665)">
     <path
-       style="fill:#f2f2f2;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 74.987461,286.41662 -56.138095,-18.15354 0.100317,-77.09643 h 57.98784 l -2e-6,57.81143 21.788928,18.8296 h 15.071471 l 21.78892,-18.8296 v -57.81143 h 57.98784 l 0.10032,77.09643 -56.1381,18.15354 z"
-       id="path15169"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="ccccccccccccc" />
+       style="fill:#f2f2f2;stroke:none;stroke-width:0.99999994px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 0 0 L -0.37890625 291.38867 L 26.251953 300 L 208.37891 300 L 208.37891 358.89453 L 211.79688 360 L 448.20312 360 L 660.37891 291.38867 L 660 0 L 440.83398 0 L 440.83398 218.5 L 358.48242 289.66602 L 301.51758 289.66602 L 219.16602 218.5 L 219.16602 0 L 0 0 z "
+       transform="matrix(0.26458333,0,0,0.26458333,18.949683,191.16665)"
+       id="path15169" />
     <g
        id="g14040"
        transform="translate(4.7569818,178.57776)">
@@ -761,5 +775,58 @@
        id="path10482"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cccc" />
+    <rect
+       style="opacity:1;vector-effect:none;fill:#d5e5ff;fill-opacity:1;stroke:#000000;stroke-width:0.49999997;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect112"
+       width="10.583333"
+       height="10.583333"
+       x="21.166668"
+       y="273.18747" />
+    <rect
+       y="273.18747"
+       x="60.854164"
+       height="10.583333"
+       width="10.583333"
+       id="rect128"
+       style="opacity:1;vector-effect:none;fill:#ffe680;fill-opacity:1;stroke:#000000;stroke-width:0.49999997;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    <text
+       id="text180"
+       y="280.18057"
+       x="26.458334"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888903px;line-height:1;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       xml:space="preserve"><tspan
+         id="tspan178"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888903px;line-height:1;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';text-align:center;text-anchor:middle;stroke-width:0.26458332"
+         y="280.18057"
+         x="26.458334"
+         sodipodi:role="line">A</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888903px;line-height:1;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="66.01001"
+       y="280.18057"
+       id="text24-7"><tspan
+         sodipodi:role="line"
+         x="66.01001"
+         y="280.18057"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888903px;line-height:1;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';text-align:center;text-anchor:middle;stroke-width:0.26458332"
+         id="tspan22-3">B</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888903px;line-height:1;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="46.16132"
+       y="279.12222"
+       id="text184"><tspan
+         sodipodi:role="line"
+         x="46.16132"
+         y="279.12222"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888903px;line-height:1;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';text-align:center;text-anchor:middle;stroke-width:0.26458332"
+         id="tspan182">can import</tspan></text>
+    <path
+       sodipodi:nodetypes="cc"
+       inkscape:connector-curvature="0"
+       id="path12530-2"
+       d="M 34.004385,281.71027 H 60.854164"
+       style="opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.70555556;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#marker12534-5)" />
   </g>
 </svg>
