@@ -16,7 +16,7 @@ It also helps to structure your programs better if each file has it's own respon
 Your style of coding may also be different depending on the type of file – pure javascript modules may be written in a functional programming style, while the main browser file is likely to be more imperative.
 
 Let's review the types of javascript file you'll work with.
-| ![Types of javascript file. Browser main files can import browser modules. Server main files can import server modules. Test files can import test modules. All modules can import other modules of the same type. All files can import pure javascript modules.](resources/js_file_types.png) |
+| ![Types of javascript file. The browser main file can import browser modules. The Server main file can import server modules. Test files can import test modules. All modules can import other modules of the same type. All files can import pure javascript modules.](resources/js_file_types.png) |
 |---|
 | **Types of javascript files:** Main files and modules running on the browser, server, and test framework. Arrows show which types of file can import other types, e.g. a browser main file can import a pure javascript module, and a server module can import another server module.|
 
@@ -118,3 +118,12 @@ We'll look at the structure of a rock paper scissors, *rps*, game app that we'll
 
 The figure shows the files that comprise the rock paper scissors web-app.
 The files are organised into three directories, `/client/`, `/server/`, and `/tests/`.
+Each of these three directories hosts an entry point for a javascript program, i.e. a main file or test file.
+The import chain for each program is shown with all the javascript files imported into a runtime environment (the browser, server, or test framework) grouped together.
+An important point to note is how the client and server programs are independant of each other – they run in separate environments, and they don't share any files; in principle they could be run on different computers.
+Any data sharing between the two programs has to be done with *ajax* i.e. the *fetch* API.
+The test and server programs also run in different contexts, but the `rps.js` file here is loaded into both programs.
+This pure javascript module is agnostic to where it is imported, it doesn't *know* whether it is hosted on a server or is being tested, its only concern is simulating games of rock paper scissors.
+Because it is a pure javascript module it can be imported into any environment, even on the browser.
+
+Let's take a look at what the role of each javascript file is in this example.
