@@ -117,13 +117,30 @@ We'll look at the structure of a rock paper scissors, *rps*, game app that we'll
 | **Web app file structure example:** |
 
 The figure shows the files that comprise the rock paper scissors web-app.
-The files are organised into three directories, `/client/`, `/server/`, and `/tests/`.
+The files are organised into three directories, `/browser/`, `/server/`, and `/tests/`.
 Each of these three directories hosts an entry point for a javascript program, i.e. a main file or test file.
 The import chain for each program is shown with all the javascript files imported into a runtime environment (the browser, server, or test framework) grouped together.
-An important point to note is how the client and server programs are independant of each other – they run in separate environments, and they don't share any files; in principle they could be run on different computers.
+An important point to note is how the browser and server programs are independant of each other – they run in separate environments, and they don't share any files; in principle they could be run on different computers.
 Any data sharing between the two programs has to be done with *ajax* i.e. the *fetch* API.
 The test and server programs also run in different contexts, but the `rps.js` file here is loaded into both programs.
 This pure javascript module is agnostic to where it is imported, it doesn't *know* whether it is hosted on a server or is being tested, its only concern is simulating games of rock paper scissors.
 Because it is a pure javascript module it can be imported into any environment, even on the browser.
 
 Let's take a look at what the role of each javascript file is in this example.
+
+- `/browser/main.js`
+  - This is the **browser main file**, the entry point for the browser program. It displays the state of an online rock paper scissors game and allows users to interact with the game by selecting a move. Its role here is to set up event listeners for when the user interacts with the page, and to send messages to the server then await and interpret the response.
+- `/browser/ajax.js`
+  - `ajax.js` exports a helper function that allows javascript object values to be sent directly to the localhost server. It is a **browser module** since it makes use of the browser provided `fetch()` function.
+- `/server/server.js`
+  - The **server main file**. It has two jobs; to statically serve the browser program, and to answer any http requests – it reads the body of the request and converts it into a javascript object value for `api.js` to process.
+- `/server/api.js`
+  - This file defines what messages can be sent to the server for playing rock paper scissors, i.e. joining a new game, making a move, and checking the result. It doens't itself know the rules of rock paper scissors, for that it imports `rps.js`. In principle, this file could be a **server module**, since it could access functions only available to the server, such as databases, however in this example it doesn't rely on any such interfaces, so is actually a **pure javascript module**.
+- `/server/rps.js`
+  - This module has a single purpose, and that is to play rock paper scissors. It provides a function that takes moves from two players and returns which player has won. It doesn't know about browsers, servers, or tests and can be in principle imported anywhere because it is a **pure javascript module**.
+- `/tests/rps.test.js`
+  - This is the **test file** for `rps.js`, it gives us confidence that we have coded `rps.js` correctly by testing properties that we would expect to hold true, i.e. symmetry between each player. This file is picked up by the test framework and runs in the test environment, with additional functions from mocha, and fast-check available.
+- `/tests/property.js`
+  - This file exports a helper function for property based testing that allows property tests to be declared in a less verbose way. Since it relies on functions from the test framework, it is classified as a **test module**.
+
+
