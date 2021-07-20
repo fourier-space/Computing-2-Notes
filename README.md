@@ -110,8 +110,11 @@ Test files can also import test modules, these might themselves contain more tes
 
 ### Example file structure ###
 Let's see how each of these types of file fit together in a small web app example.
-We'll look at the structure of a Rock-Paper-Scissors (RPS) game app that we'll return to in more detail throughout.
+We'll look at the structure of a rock paper scissors, *rps*, game app that we'll return to in more detail throughout these notes.
 
 | ![Web app file structure example.](resources/web_app_file_structure_example.png) |
 |---|
 | **Web app file structure example:** |
+
+The figure shows the files that comprise the rock paper scissors web-app.
+The files are organised into three directories, `/client/`, `/server/`, and `/tests/`.
