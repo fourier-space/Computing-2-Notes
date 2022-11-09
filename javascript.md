@@ -590,10 +590,9 @@ But in it's completeness, doesn't always focus on best practice.
 
 The most important statements are,
 * `if` and `else`
-* `switch`
 * `while`
 
-Also useful in some contexts are,
+Also useful for error handling,
 * `try`, `catch`, `finally`
 
 Useful operators are
@@ -660,5 +659,5 @@ This has been a quick review of Javascript
 for those familiar with coding, i.e. in Python.
 There are more features in the language that is neccesary to use in your code,
 and indeed some features to be actively avoided.
-This document doens't go into the full depth,
-but hopefully is a reference to make you more familiar and avoid some of the key pitfalls of code you'll see in the wild.
+This document doens't go into the full depth of javascript but
+is a reference to make you more familiar and avoid some of the key pitfalls of code you'll see in the wild.
