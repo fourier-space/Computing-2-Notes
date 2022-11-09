@@ -35,7 +35,7 @@ Following the *Good Parts*, we won't review every feature that exists in the
 language, and will certainly miss out some features that will appear in code you
 will find in other resources and on the internet.
 
-We'll also only consider the latest version of Javascript,
+We'll only consider the latest version of Javascript,
 i.e. what is implemented in the current versions of mainstream web browsers and
 server platforms.
 If you want to support a wider base of platforms, you have to work a bit harder.
@@ -76,7 +76,7 @@ const array_is_empty = array.length === 0;
 then `array_is_empty` would contain the value either `true` or `false` depending
 on whether `array` was empty or not.
 
-You'll also see booleans controling the flow of a program,
+Booleans, or expressions that evaluate to booleans, control the flow of a program,
 which code path it should take,
 i.e. in `if` or `while` statements,
 ```javascript
@@ -289,7 +289,7 @@ const daily_durations_of_breaches = [
     [1.45, 30.23]
 ]
 ```
-We can also represent the empty array as `[]`.
+We represent the empty array as `[]`.
 
 Unlike primitive values, whose values are fixed,
 object types such as arrays can be modified,
@@ -517,7 +517,7 @@ week_review.accidents_this_week = 3; // This line will silently do nothing.
 week_review.accidents_this_week // 2
 ```
 
-Function parameters are also similar to variables, e.g.,
+Function parameters are similar to variables, e.g.,
 ```javascript
 const make_louder = function (quiet_string) {
     const string_in_caps = quiet_string.toUpperCase();
@@ -554,7 +554,7 @@ The variable only exists for each function invocation,
 so each time the function is called `string_in_caps` is a different
 variable, and gets assigned a different value.
 Again no rules are broken here, you cannot change the value of `make_louder` *within* the function after assingment.
-Also note that outside the function `string_in_caps` is unavailable.
+Note that outside the function `string_in_caps` is unavailable.
 
 Variables that are defined outside a function body will be in scope within that function,
 if they were in scope when the function was declared.
@@ -569,17 +569,17 @@ const triple = function (number_to_triple) {
 Here `factor` was defined outside the function `triple`,
 but it is within scope of the function.
 
-The final aspect of scope is
+A more advanced aspect of scope is
 [*closure*](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures),
 Which is a powerful feature that we'll discuss this in this module,
 but it's a more technical than this introductory review needs.
 
-Javascript also has *module scope* which means variables declared in one module file will not be visible outside the file unless explicitly exported.
+Finally, Javascript has *module scope* which means variables declared in one module file will not be visible outside the file unless explicitly exported.
 Again this is a good thing, since you can be confident that code from elsewhere isn't influencing the code you're working on, which can lead to bugs.
 
 ### Control Flow
 I've mainly talked about values, types, and variables here,
-but a language is also about control flow and branching.
+but a language will allow for control flow and branching.
 I.e. when to change behaviour with an `if` statement, when to loop etc.
 
 MDN will cover the full details of the language in
@@ -592,7 +592,7 @@ The most important statements are,
 * `if` and `else`
 * `while`
 
-Also useful for error handling,
+The following trio are used for error handling,
 * `try`, `catch`, `finally`
 
 Useful operators are
