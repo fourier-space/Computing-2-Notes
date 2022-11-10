@@ -351,15 +351,6 @@ Like arrays, these can be nested as too, and contain any value within,
 including other objects and arrays.
 
 The empty object is specified with the object literal `{}`.
-Although, `Object.create(null)`, can be used in specific situations,
-i.e. for defining modules, when you want *none* of its built-in properties.
-
-There is a helper object, called
-[`Object`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)
-with a few useful methods,
-```Javascript
-Object.keys(employee) // ["name", "age", "position", "awards", "inventory"]
-```
 
 #### Functions
 One of the most powerful features of Javascript is its functions.
