@@ -64,7 +64,7 @@ Another example of mapping using a spreadsheet is mail-merge,
 e.g. I have a list of contact details, and I want to produce personalised
 invites to an event.
 
-<iframe src="https://docs.google.com/spreadsheets/d/1xp82r4p8V28Y5hMR3FxMcOQKPoJPIjOpEbFAeE9q8uM/" width="100%" height="300px">
+<iframe src="https://docs.google.com/spreadsheets/d/1xp82r4p8V28Y5hMR3FxMcOQKPoJPIjOpEbFAeE9q8uM/" width="100%" height="400px">
 </iframe>
 
 In the spreadsheet above, I have details of my friends in two columns,
@@ -75,7 +75,7 @@ Here we have a function that maps an input of `"Music"` to `"Saturday"` and
 all other inputs to `"Sunday"`, then a function that combines the names and
 day columns to output the invitation.
 
-<iframe src="https://docs.google.com/spreadsheets/d/1CaZOeqaKZMNbPlJIxAt4ONyIexTfSWAXP-7sNVnuGcE/" width="100%" height="400px"></iframe>
+<iframe src="https://docs.google.com/spreadsheets/d/1CaZOeqaKZMNbPlJIxAt4ONyIexTfSWAXP-7sNVnuGcE/" width="100%" height="500px"></iframe>
 
 ## Map
 
