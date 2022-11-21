@@ -75,7 +75,48 @@ Here we have a function that maps an input of `"Music"` to `"Saturday"` and
 all other inputs to `"Sunday"`, then a function that combines the names and
 day columns to output the invitation.
 
+The second common spreadsheet operation is filtering.
+We decide to show some data rows and hide others.
+
 <iframe src="https://docs.google.com/spreadsheets/d/1CaZOeqaKZMNbPlJIxAt4ONyIexTfSWAXP-7sNVnuGcE/" width="100%" height="500px"></iframe>
+
+In this example, we have a dataset of students and which elective module they
+are enrolled on.
+For our purposes, we only want to view students who are enrolled on
+Design Psychology.
+To do this, we make use of a *predicate function*
+– a function that returns `true` or `false` –
+and we can filter to show only rows where the filter returns `true`.
+In this case the predicate is `= B="Design Psychology"`.
+In the example, there are two sheets,
+"Filter" and "Filter – Only Design Psychology"
+which shows the the dataset before and after the filter.
+
+The last example we'll look at in spreadsheet terms is when we want to
+aggregate a dataset to a single value.
+This operation is called *reduce* because we are taking a list of values
+and reducing it to a single value.
+
+The simplest example of this is taking a sum of a list of numbers,
+our input is a whole list, and our output is a single number that is the sum.
+There are a lot of these reducing functions built into spreadsheet software,
+such as `SUM`, `AVERAGE`, `CONCATENATE`, `STDEV`, etc.
+
+<iframe src="https://docs.google.com/spreadsheets/d/1OLmw-YPvd0VbtKnbUfZ2UCdOsAh5ceMUSf8LEW0vdIo" width="100%" height="500px"></iframe>
+
+We show some aggregating functions in the spreadsheet above.
+
+Some of these functions can be constructed by repeatedly
+applying an operation over two inputs.
+For example, with `SUM` which works on a list,
+we have the plus operator, `+`, which works on a pair of numbers.
+The output of `SUM` is come to by successively adding together each element.
+`SUM(1, 2, 3, 4) = ((1 + 2) + 3) + 4`.
+We've put the brackets here to emphasise the order that the addition is
+being done.
+We're creating a running total as we go,
+
+<iframe src="https://docs.google.com/spreadsheets/d/1fzUuZC-iDX7-6K5-RZ_toCmLGD5IG30AT_pTdprqUJg" width="100%" height="500px"></iframe>
 
 ## Map
 
