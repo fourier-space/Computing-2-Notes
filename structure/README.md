@@ -19,9 +19,10 @@ It also helps to structure your programs better if each file has it's own respon
 Your style of coding may also be different depending on the type of file – pure javascript modules may be written in a functional programming style, while the main browser file is likely to be more imperative.
 
 Let's review the types of javascript file you might work with.
+
 | ![Types of javascript file. The browser main file can import browser modules. The Server main file can import server modules. Test files can import test modules. All modules can import other modules of the same type. All files can import pure javascript modules.](js_file_types.png) |
 |---|
-| **Types of javascript files:** Main files and modules running on the browser, server, and test framework. Arrows show which types of file can import other types, e.g. a browser main file can import a pure javascript module, and a server module can import another server module.|
+| **Types of javascript files:** Main files and modules running on the browser, server, and test framework. Arrows show which types of file can import other types, e.g. a browser main file can import a pure javascript module, and a server module can import another server module. |
 
 
 ### Browser Main File ###
