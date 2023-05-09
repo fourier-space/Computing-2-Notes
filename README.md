@@ -4,4 +4,3 @@ I will occasionally write supplementary notes and post them here to complement t
 
 * [Javascript Language Review](javascript)
 * [Structure of a Web App](structure)
-* [Resources](resources)

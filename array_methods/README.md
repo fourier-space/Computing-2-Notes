@@ -38,7 +38,7 @@ new processed columns or aggregate values.
 
 Let's take as an example plotting a function.
 
-<iframe src="https://docs.google.com/spreadsheets/d/1hUX3YHtQL6McZ91IUi1llxhUbd3nmpblgPfhLChj5hw/edit?usp=sharing" width="100%" height="600px" ></iframe>
+<iframe src="https://docs.google.com/spreadsheets/d/1hUX3YHtQL6McZ91IUi1llxhUbd3nmpblgPfhLChj5hw" width="100%" height="600px" ></iframe>
 
 The spreadsheet above has three columns,
 the first of which contains values only, i.e. the numbers 0 to 39.
@@ -64,7 +64,7 @@ Another example of mapping using a spreadsheet is mail-merge,
 e.g. I have a list of contact details, and I want to produce personalised
 invites to an event.
 
-<iframe src="https://docs.google.com/spreadsheets/d/1xp82r4p8V28Y5hMR3FxMcOQKPoJPIjOpEbFAeE9q8uM/" width="100%" height="400px">
+<iframe src="https://docs.google.com/spreadsheets/d/1xp82r4p8V28Y5hMR3FxMcOQKPoJPIjOpEbFAeE9q8uM" width="100%" height="400px">
 </iframe>
 
 In the spreadsheet above, I have details of my friends in two columns,
@@ -78,7 +78,7 @@ day columns to output the invitation.
 The second common spreadsheet operation is filtering.
 We decide to show some data rows and hide others.
 
-<iframe src="https://docs.google.com/spreadsheets/d/1CaZOeqaKZMNbPlJIxAt4ONyIexTfSWAXP-7sNVnuGcE/" width="100%" height="500px"></iframe>
+<iframe src="https://docs.google.com/spreadsheets/d/1CaZOeqaKZMNbPlJIxAt4ONyIexTfSWAXP-7sNVnuGcE" width="100%" height="500px"></iframe>
 
 In this example, we have a dataset of students and which elective module they
 are enrolled on.
@@ -118,7 +118,83 @@ We're creating a running total as we go,
 
 <iframe src="https://docs.google.com/spreadsheets/d/1fzUuZC-iDX7-6K5-RZ_toCmLGD5IG30AT_pTdprqUJg" width="100%" height="500px"></iframe>
 
+This running total is called the accumulator,
+since the value accumulates as each item in the list is iterated through.
+
+Let's take a final example, where instead of numbers we are combining text.
+
+<iframe src="https://docs.google.com/spreadsheets/d/1EvBCXtqyN3QdMBifJyGA9slpbDIv1nBTH3HpaC7zdLE" width="100%" height="500px"></iframe>
+
+Here lyrics to *Adele – Hello* are combined word by word.
+In this case, we do a *map* first to add a space to the end of each word.
+Then we manually use the `CONCAT` function,
+which on Google Docs combines two strings together,
+and show how that operates if you combine word by word – result in blue.
+The spreadsheet also provides a `CONCATENATE` function,
+which does the operation in a single step – result in red.
+
+In this case, `CONCAT` acts like `+` and `CONCATENATE` acts like `SUM`.
+
+For this example, we had to do a map first then a reduce.
+This, we will see is a common pattern in functional programming.
+
 ## Map
+Having seen how a spreadsheet operates on data, particularly lists of values,
+let's do the equivalent in Javascript.
+
+If we have an array of numbers, we can apply a function to every number using
+map.
+```javascript
+const range = [0, 1, 2, 3, 4, 5, 6];
+const doubled = range.map((x) => 2 * x); // [0, 2, 4, 6, 8, 10, 12]
+```
+
+Let's examine this.
+Every array value, in this case `range`, has a `map` method on it.
+This method takes as its argument a function,
+and that function is applied to every element of the array,
+with the values returned forming the entries of the resultant array.
+In this case, we've applied the *arrow function* `(x) => 2 * x`
+which doubles its input.
+
+The function we give to the array can be written in a few ways,
+we can use the long-form function expression,
+```javascript
+const range = [0, 1, 2, 3, 4, 5, 6];
+
+const doubled = range.map(function (x) {
+     return 2 * x;
+}); // [0, 2, 4, 6, 8, 10, 12]
+```
+We can also define the function outside the map,
+```javascript
+const range = [0, 1, 2, 3, 4, 5, 6];
+
+const double = function (x) {
+     return 2 * x;
+};
+
+const doubled = range.map(double); // [0, 2, 4, 6, 8, 10, 12]
+```
+
+Here `double` is a function, that we are passing by name to `map`.
+
+In each of these examples `map` is a higher order function,
+since it takes another function as its parameter.
+
+Let's look at the examples of map that we did with a spreadsheet
+and reproduce them in javascript.
+
+In that example, we took a sequence of numbers 0–40,
+transformed them into a range from -4 to 4,
+then applied the Gaussian function to the range.
+
+Here is how we can do this in Javascript with map,
+```javascript
+const sequence = R.range(0, 40);
+const x_values = sequence.map((i) => (i - 20) / 5);
+const f_values = x_values.map((x) => Math.exp(- x * x / 2));
+```
 
 ## Filter
 
