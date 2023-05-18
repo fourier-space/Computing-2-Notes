@@ -1,7 +1,4 @@
 # The Structure of a Web App
-    Note this is a slightly older version of this note.
-    That diverges a little from the conventions of the module.
-    I'll update it shortly before asking you to read it.
 ## Javascript Files
 
 Javascript files in web apps come in a number of varieties.

@@ -37,10 +37,8 @@ and that formulas can be applied to those columns to generate
 new processed columns or aggregate values.
 
 Let's take as an example plotting a function.
-
-<iframe src="https://docs.google.com/spreadsheets/d/1hUX3YHtQL6McZ91IUi1llxhUbd3nmpblgPfhLChj5hw" width="100%" height="600px" ></iframe>
-
-The spreadsheet above has three columns,
+[Here is a spreadsheet](https://docs.google.com/spreadsheets/d/1hUX3YHtQL6McZ91IUi1llxhUbd3nmpblgPfhLChj5hw).
+It has three columns,
 the first of which contains values only, i.e. the numbers 0 to 39.
 
 The second column is a calculated column from the first,
@@ -64,10 +62,8 @@ Another example of mapping using a spreadsheet is mail-merge,
 e.g. I have a list of contact details, and I want to produce personalised
 invites to an event.
 
-<iframe src="https://docs.google.com/spreadsheets/d/1xp82r4p8V28Y5hMR3FxMcOQKPoJPIjOpEbFAeE9q8uM" width="100%" height="400px">
-</iframe>
-
-In the spreadsheet above, I have details of my friends in two columns,
+[In another spreadsheet](https://docs.google.com/spreadsheets/d/1xp82r4p8V28Y5hMR3FxMcOQKPoJPIjOpEbFAeE9q8uM),
+I have details of my friends in two columns,
 their name and the group I know them from.
 In the example, I want music friends to join on Saturday
 and everyone else on Sunday.
@@ -78,9 +74,8 @@ day columns to output the invitation.
 The second common spreadsheet operation is filtering.
 We decide to show some data rows and hide others.
 
-<iframe src="https://docs.google.com/spreadsheets/d/1CaZOeqaKZMNbPlJIxAt4ONyIexTfSWAXP-7sNVnuGcE" width="100%" height="500px"></iframe>
-
-In this example, we have a dataset of students and which elective module they
+[In this example](https://docs.google.com/spreadsheets/d/1CaZOeqaKZMNbPlJIxAt4ONyIexTfSWAXP-7sNVnuGcE),
+we have a dataset of students and which elective module they
 are enrolled on.
 For our purposes, we only want to view students who are enrolled on
 Design Psychology.
@@ -102,8 +97,7 @@ our input is a whole list, and our output is a single number that is the sum.
 There are a lot of these reducing functions built into spreadsheet software,
 such as `SUM`, `AVERAGE`, `CONCATENATE`, `STDEV`, etc.
 
-<iframe src="https://docs.google.com/spreadsheets/d/1OLmw-YPvd0VbtKnbUfZ2UCdOsAh5ceMUSf8LEW0vdIo" width="100%" height="500px"></iframe>
-
+[In this example](https://docs.google.com/spreadsheets/d/1OLmw-YPvd0VbtKnbUfZ2UCdOsAh5ceMUSf8LEW0vdIo),
 We show some aggregating functions in the spreadsheet above.
 
 Some of these functions can be constructed by repeatedly
@@ -114,16 +108,13 @@ The output of `SUM` is come to by successively adding together each element.
 `SUM(1, 2, 3, 4) = ((1 + 2) + 3) + 4`.
 We've put the brackets here to emphasise the order that the addition is
 being done.
-We're creating a running total as we go,
-
-<iframe src="https://docs.google.com/spreadsheets/d/1fzUuZC-iDX7-6K5-RZ_toCmLGD5IG30AT_pTdprqUJg" width="100%" height="500px"></iframe>
+We can be explicit about this and create a running total as we go,
+[Spreadsheet](https://docs.google.com/spreadsheets/d/1fzUuZC-iDX7-6K5-RZ_toCmLGD5IG30AT_pTdprqUJg)
 
 This running total is called the accumulator,
 since the value accumulates as each item in the list is iterated through.
 
-Let's take a final example, where instead of numbers we are combining text.
-
-<iframe src="https://docs.google.com/spreadsheets/d/1EvBCXtqyN3QdMBifJyGA9slpbDIv1nBTH3HpaC7zdLE" width="100%" height="500px"></iframe>
+[Let's take a final example](https://docs.google.com/spreadsheets/d/1EvBCXtqyN3QdMBifJyGA9slpbDIv1nBTH3HpaC7zdLE),where instead of numbers we are combining text.
 
 Here lyrics to *Adele – Hello* are combined word by word.
 In this case, we do a *map* first to add a space to the end of each word.
